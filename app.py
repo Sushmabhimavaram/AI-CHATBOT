@@ -1,7 +1,7 @@
 import ollama
 from flask import Flask, request, render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def chat():
@@ -27,5 +27,5 @@ def chat():
 
     return render_template("index.html", user_input="", response="")
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     app.run(debug=True)
